@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)../assets/AzureBlue/selfAsserted.cshtml -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Sign up</title>
+
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="https://zamastorage2022.z6.web.core.windows.net/cornwall/css/assets.css" rel="stylesheet" type="text/css" />
+    <link href="https://zamastorage2022.z6.web.core.windows.net/cornwall/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="https://zamastorage2022.z6.web.core.windows.net/cornwall/css/selfasserted.css" rel="stylesheet" type="text/css" />
+    
+</head>
+<body>
+    <div class="container  self_asserted_container ">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div id="api">
+                        </div>
+                        <script>
+                            
+                            function checkSelectedItem() {
+                                var selecteditem = $(this).children("option:selected").val();  
+                                if(selecteditem != "other")
+                                {                                       
+                                    $("#othertitle").attr("style","display: none !important;");
+                                }
+                                else 
+                                {
+                                    $("#othertitle").attr("style","display: block !important;");
+                                }    
+                            }
+
+
+                            $(function(){
+                                checkSelectedItem();                                 
+
+                                $("select.dropdown_single").change (function () {  
+                                    var selecteditem = $(this).children("option:selected").val();  
+                                    if(selecteditem != "other")
+                                    {                                       
+                                        $("#othertitle").attr("style","display: none !important;");
+                                    }
+                                    else 
+                                    {
+                                        $("#othertitle").attr("style","display: block !important;");
+                                    }                                
+                                });  
+                            });
+                           
+                            </script>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body></html>
